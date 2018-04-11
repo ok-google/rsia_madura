@@ -90,26 +90,33 @@ public class StokObatAction implements StokObatDAO {
 	}
 
 	@Override
-	public void stokObatStore(t_StokObat stokObatModel) {
+	public int stokObatStore(t_StokObat stokObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(stokObatModel);
-
+		current.flush();
+		
+		return stokObatModel.getStokobat_id();
 	}
 
 	@Override
-	public void stokObatUpdate(t_StokObat stokObatModel) {
+	public int stokObatUpdate(t_StokObat stokObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(stokObatModel);
-
+		current.flush();
+		
+		return stokObatModel.getStokobat_id();
 	}
 
 	@Override
-	public void stokObatDelete(t_StokObat stokObatModel) {
+	public int stokObatDelete(t_StokObat stokObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(stokObatModel);
+		current.flush();
+		
+		return stokObatModel.getStokobat_id();
 
 	}
 

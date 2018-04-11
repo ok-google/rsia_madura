@@ -10,7 +10,7 @@ public interface KelurahanDAO {
 	public String createLinks(int page, int limit);
 	public m_Kelurahan getKelurahan(int kelurahanId);
 	
-	public void kelurahanStore(m_Kelurahan kelurahanModel);
-	public void kelurahanUpdate(m_Kelurahan kelurahanModel);
-	public void kelurahanDelete(m_Kelurahan kelurahanModel);
+	public int kelurahanStore(m_Kelurahan kelurahanModel);
+	public int kelurahanUpdate(m_Kelurahan kelurahanModel);
+	public int kelurahanDelete(m_Kelurahan kelurahanModel);
 }

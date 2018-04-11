@@ -8,6 +8,6 @@ public interface ProvinsiService {
 	public List<m_Provinsi> getProvinsis(int page, int limit);
 	
 	public String createLinks(int page, int limit);
-	public void store(m_Provinsi provinsiModel);
+	public int store(m_Provinsi provinsiModel);
 	
 }

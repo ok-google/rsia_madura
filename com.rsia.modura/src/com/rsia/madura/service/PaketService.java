@@ -10,7 +10,7 @@ public interface PaketService {
 	public String createLinks(int page, int limit);
 	public m_Paket getPaket(int paketId);
 	
-	public void store(m_Paket paketModel);
-	public void update(m_Paket paketModel);
-	public void delete(m_Paket paketModel);
+	public int store(m_Paket paketModel);
+	public int update(m_Paket paketModel);
+	public int delete(m_Paket paketModel);
 }

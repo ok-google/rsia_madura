@@ -42,23 +42,23 @@ public class BarangDetServiceAction implements BarangDetService {
 
 	@Override
 	@Transactional
-	public void bardetStore(m_BarangDetail bardetModel) {
+	public int bardetStore(m_BarangDetail bardetModel) {
 		// TODO Auto-generated method stub
-		bardetDAO.barangdetailStore(bardetModel);
+		return bardetDAO.barangdetailStore(bardetModel);
 	}
 
 	@Override
 	@Transactional
-	public void bardetUpdate(m_BarangDetail bardetModel) {
+	public int bardetUpdate(m_BarangDetail bardetModel) {
 		// TODO Auto-generated method stub
-		bardetDAO.barangdetailUpdate(bardetModel);
+		return bardetDAO.barangdetailUpdate(bardetModel);
 	}
 
 	@Override
 	@Transactional
-	public void bardetDelete(m_BarangDetail bardetModel) {
+	public int bardetDelete(m_BarangDetail bardetModel) {
 		// TODO Auto-generated method stub
-		bardetDAO.barangdetailDelete(bardetModel);
+		return bardetDAO.barangdetailDelete(bardetModel);
 	}
 	
 	}

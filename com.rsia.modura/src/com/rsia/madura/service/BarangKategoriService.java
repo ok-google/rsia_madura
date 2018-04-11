@@ -11,7 +11,7 @@ public interface BarangKategoriService {
 	public m_BarangKategori getBarangKategori(int kategoriId);
 	
 	public String createLinks(int page, int limit);
-	public void store(m_BarangKategori kategoriModel);
-	public void update(m_BarangKategori kategoriModel);
-	public void delete(m_BarangKategori kategoriModel);
+	public int store(m_BarangKategori kategoriModel);
+	public int update(m_BarangKategori kategoriModel);
+	public int delete(m_BarangKategori kategoriModel);
 }

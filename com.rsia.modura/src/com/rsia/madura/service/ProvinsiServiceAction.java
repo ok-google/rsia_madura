@@ -34,8 +34,8 @@ public class ProvinsiServiceAction implements ProvinsiService {
 	
 	@Override
 	@Transactional
-	public void store(m_Provinsi provinsiModel) {
+	public int store(m_Provinsi provinsiModel) {
 		
-		provinsiDAO.provinsiStore(provinsiModel);
+		return provinsiDAO.provinsiStore(provinsiModel);
 	}
 }

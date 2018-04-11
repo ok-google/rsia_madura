@@ -90,24 +90,33 @@ public class KecamatanAction implements KecamatanDAO{
 	}
 
 	@Override
-	public void kecamatanStore(m_Kecamatan kecamatanModel) {
+	public int kecamatanStore(m_Kecamatan kecamatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(kecamatanModel);
+		current.flush();
+		
+		return kecamatanModel.getKecamatan_id();
 	}
 
 	@Override
-	public void kecamatanUpdate(m_Kecamatan kecamatanModel) {
+	public int kecamatanUpdate(m_Kecamatan kecamatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kecamatanModel);
+		current.flush();
+		
+		return kecamatanModel.getKecamatan_id();
 	}
 
 	@Override
-	public void kecamatanDelete(m_Kecamatan kecamatanModel) {
+	public int kecamatanDelete(m_Kecamatan kecamatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kecamatanModel);
+		current.flush();
+		
+		return kecamatanModel.getKecamatan_id();
 		
 	}
 }

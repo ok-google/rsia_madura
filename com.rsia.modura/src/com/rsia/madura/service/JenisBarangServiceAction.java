@@ -30,24 +30,24 @@ public class JenisBarangServiceAction implements JenisBarangService{
 
 	@Override
 	@Transactional
-	public void store(m_JenisBarang jenisBarangModel) {
+	public int store(m_JenisBarang jenisBarangModel) {
 		
-		jenisBarangDAO.jenisBarangStore(jenisBarangModel);
+		return jenisBarangDAO.jenisBarangStore(jenisBarangModel);
 		
 	}
 
 	@Override
 	@Transactional
-	public void update(m_JenisBarang jenisBarangModel) {
+	public int update(m_JenisBarang jenisBarangModel) {
 		
-		jenisBarangDAO.jenisBarangUpdate(jenisBarangModel);
+		return jenisBarangDAO.jenisBarangUpdate(jenisBarangModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_JenisBarang jenisBarangModel) {
+	public int delete(m_JenisBarang jenisBarangModel) {
 		
-		jenisBarangDAO.jenisBarangDelete(jenisBarangModel);
+		return jenisBarangDAO.jenisBarangDelete(jenisBarangModel);
 	}
 
 }

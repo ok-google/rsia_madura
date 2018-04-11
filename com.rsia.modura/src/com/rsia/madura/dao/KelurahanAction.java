@@ -91,25 +91,34 @@ public class KelurahanAction implements KelurahanDAO {
 	}
 
 	@Override
-	public void kelurahanStore(m_Kelurahan kelurahanModel) {
+	public int kelurahanStore(m_Kelurahan kelurahanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(kelurahanModel);
+		current.flush();
+		
+		return kelurahanModel.getKelurahan_id();
 		
 	}
 
 	@Override
-	public void kelurahanUpdate(m_Kelurahan kelurahanModel) {
+	public int kelurahanUpdate(m_Kelurahan kelurahanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kelurahanModel);
+		current.flush();
+		
+		return kelurahanModel.getKelurahan_id();
 		
 	}
 
 	@Override
-	public void kelurahanDelete(m_Kelurahan kelurahanModel) {
-Session current = sessionFactory.getCurrentSession();
+	public int kelurahanDelete(m_Kelurahan kelurahanModel) {
+		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kelurahanModel);
+		current.flush();
+		
+		return kelurahanModel.getKelurahan_id();
 	}
 }

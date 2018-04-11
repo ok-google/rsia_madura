@@ -33,9 +33,9 @@ public class KecamatanServiceAction implements KecamatanService {
 
 	@Override
 	@Transactional
-	public void store(m_Kecamatan kecamatanModel) {
+	public int store(m_Kecamatan kecamatanModel) {
 		
-		kecamatanDAO.kecamatanStore(kecamatanModel);
+		return kecamatanDAO.kecamatanStore(kecamatanModel);
 		
 	}
 

@@ -34,8 +34,8 @@ public class KelurahanServiceAction implements KelurahanService{
 	
 	@Override
 	@Transactional
-	public void store(m_Kelurahan kelurahanModel) {
-		kelurahanDAO.kelurahanStore(kelurahanModel);
+	public int store(m_Kelurahan kelurahanModel) {
+		return kelurahanDAO.kelurahanStore(kelurahanModel);
 		
 	}
 }

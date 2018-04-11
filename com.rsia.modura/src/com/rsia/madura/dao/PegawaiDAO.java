@@ -15,10 +15,10 @@ public interface PegawaiDAO {
 	public List<getPegawai> getPegawais();
 	public m_Pegawai getPegawai(int pegawaiId);
 	
-	public void pegawaiStore(m_Pegawai pegawaiModel);
+	public int pegawaiStore(m_Pegawai pegawaiModel);
 	public int getId();
-	public void pegawaiUpdate(m_Pegawai pegawaiModel);
-	public void pegawaiDelete(m_Pegawai pegawaiModel);
+	public int pegawaiUpdate(m_Pegawai pegawaiModel);
+	public int pegawaiDelete(m_Pegawai pegawaiModel);
 	public String pegawaiUpload(HttpServletRequest request, CommonsMultipartFile pegawaiFoto) throws IOException ;
 	
 	public Date convertDateToSQLType(Date date) throws Exception;

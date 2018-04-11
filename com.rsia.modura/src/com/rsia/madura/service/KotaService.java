@@ -9,5 +9,5 @@ public interface KotaService {
 	public List<m_Kota> getKotas();
 	public String createLinks(int page, int limit);
 	
-	public void store(m_Kota kotaModel);
+	public int store(m_Kota kotaModel);
 }

@@ -11,8 +11,8 @@ public interface BarangKategoriDAO {
 	public String createLinks(int page, int limit);
 	public m_BarangKategori getBarangKategori(int kategoriId);
 	
-	public void kategoriStore(m_BarangKategori kategoriModel);
-	public void kategoriUpdate(m_BarangKategori kategoriModel);
-	public void kategoriDelete(m_BarangKategori kategoriModel);
+	public int kategoriStore(m_BarangKategori kategoriModel);
+	public int kategoriUpdate(m_BarangKategori kategoriModel);
+	public int kategoriDelete(m_BarangKategori kategoriModel);
 	
 }

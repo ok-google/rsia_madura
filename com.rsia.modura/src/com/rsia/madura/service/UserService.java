@@ -8,7 +8,7 @@ public interface UserService {
 	public List<s_User> getUsers();
 	public s_User getUser(int userId);
 	
-	public void store(s_User userModel);
-	public void update(s_User userModel);
-	public void delete(s_User userModel);
+	public int store(s_User userModel);
+	public int update(s_User userModel);
+	public int delete(s_User userModel);
 }

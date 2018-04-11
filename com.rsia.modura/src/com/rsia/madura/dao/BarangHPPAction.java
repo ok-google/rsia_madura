@@ -91,27 +91,34 @@ public class BarangHPPAction implements BarangHPPDAO {
 	}
 
 	@Override
-	public void baranghppStore(m_BarangHPP baranghppModel) {
+	public int baranghppStore(m_BarangHPP baranghppModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(baranghppModel);
+		current.flush();
+		
+		return baranghppModel.getIdBarangHPP();
+	}
+
+	@Override
+	public int baranghppUpdate(m_BarangHPP baranghppModel) {
+		Session current = sessionFactory.getCurrentSession();
+		
+		current.saveOrUpdate(baranghppModel);
+		current.flush();
+		
+		return baranghppModel.getIdBarangHPP();
 		
 	}
 
 	@Override
-	public void baranghppUpdate(m_BarangHPP baranghppModel) {
+	public int baranghppDelete(m_BarangHPP baranghppModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(baranghppModel);
+		current.flush();
 		
-	}
-
-	@Override
-	public void baranghppDelete(m_BarangHPP baranghppModel) {
-		Session current = sessionFactory.getCurrentSession();
-		
-		current.saveOrUpdate(baranghppModel);
-		
+		return baranghppModel.getIdBarangHPP();		
 	}
 
 }

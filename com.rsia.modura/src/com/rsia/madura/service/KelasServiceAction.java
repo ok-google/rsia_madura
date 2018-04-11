@@ -30,24 +30,24 @@ public class KelasServiceAction implements KelasService {
 
 	@Override
 	@Transactional
-	public void store(m_Kelas kelasModel) {
+	public int store(m_Kelas kelasModel) {
 		
-		kelasDAO.kelasStore(kelasModel);
+		return kelasDAO.kelasStore(kelasModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Kelas kelasModel) {
+	public int update(m_Kelas kelasModel) {
 		
-		kelasDAO.kelasUpdate(kelasModel);
+		return kelasDAO.kelasUpdate(kelasModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Kelas kelasModel) {
+	public int delete(m_Kelas kelasModel) {
 		
-		kelasDAO.kelasDelete(kelasModel);
+		return kelasDAO.kelasDelete(kelasModel);
 
 	}
 

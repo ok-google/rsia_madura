@@ -82,11 +82,13 @@ public class ProvinsiAction implements ProvinsiDAO {
     }
 	
 	@Override
-	public void provinsiStore(m_Provinsi provinsiModel) {
+	public int provinsiStore(m_Provinsi provinsiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(provinsiModel);
+		current.flush();
 		
+		return provinsiModel.getPropinsi_id();
 	}
 
 	@Override
@@ -99,18 +101,23 @@ public class ProvinsiAction implements ProvinsiDAO {
 	}
 
 	@Override
-	public void provinsiUpdate(m_Provinsi provinsiModel) {
+	public int provinsiUpdate(m_Provinsi provinsiModel) {
 		
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(provinsiModel);
+		current.flush();
 		
+		return provinsiModel.getPropinsi_id();		
 	}
 
 	@Override
-	public void provinsiDelete(m_Provinsi provinsiModel) {
+	public int provinsiDelete(m_Provinsi provinsiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(provinsiModel);
+		current.flush();
+		
+		return provinsiModel.getPropinsi_id();
 	}
 }

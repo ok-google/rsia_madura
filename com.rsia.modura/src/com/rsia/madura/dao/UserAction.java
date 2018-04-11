@@ -37,27 +37,33 @@ public class UserAction implements UserDAO {
 	}
 
 	@Override
-	public void userStore(s_User userModel) {
+	public int userStore(s_User userModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(userModel);
-
+		current.flush();
+		
+		return userModel.getUser_id();
 	}
 
 	@Override
-	public void userUpdate(s_User userModel) {
+	public int userUpdate(s_User userModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(userModel);
-
+		current.flush();
+		
+		return userModel.getUser_id();
 	}
 
 	@Override
-	public void userDelete(s_User userModel) {
+	public int userDelete(s_User userModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(userModel);
+		current.flush();
 		
+		return userModel.getUser_id();
 
 	}
 

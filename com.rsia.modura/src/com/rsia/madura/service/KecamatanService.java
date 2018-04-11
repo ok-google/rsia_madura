@@ -9,5 +9,5 @@ public interface KecamatanService {
 	public List<m_Kecamatan> getKecamatans(int page, int limit);
 	public String createLinks(int page, int limit);
 	
-	public void store(m_Kecamatan kecamatanModel);
+	public int store(m_Kecamatan kecamatanModel);
 }

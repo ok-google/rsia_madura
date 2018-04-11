@@ -35,26 +35,33 @@ public class SatuanAction implements SatuanDAO {
 	}
 
 	@Override
-	public void satuanStore(m_Satuan satuanModel) {
+	public int satuanStore(m_Satuan satuanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(satuanModel);
-
+		current.flush();
+		
+		return satuanModel.getSatuan_id();
 	}
 
 	@Override
-	public void satuanUpdate(m_Satuan satuanModel) {
+	public int satuanUpdate(m_Satuan satuanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(satuanModel);
-
+		current.flush();
+		
+		return satuanModel.getSatuan_id();
 	}
 
 	@Override
-	public void satuanDelete(m_Satuan satuanModel) {
+	public int satuanDelete(m_Satuan satuanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(satuanModel);
+		current.flush();
+		
+		return satuanModel.getSatuan_id();
 
 	}
 

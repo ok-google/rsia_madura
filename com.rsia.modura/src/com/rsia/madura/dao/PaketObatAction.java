@@ -90,26 +90,35 @@ public class PaketObatAction implements PaketObatDAO {
 	}
 
 	@Override
-	public void paketObatStore(m_PaketObat paketObatModel) {
+	public int paketObatStore(m_PaketObat paketObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(paketObatModel);
+		current.flush();
+		
+		return paketObatModel.getPaketBarang_id();
 		
 	}
 
 	@Override
-	public void paketObatUpdate(m_PaketObat paketObatModel) {
+	public int paketObatUpdate(m_PaketObat paketObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(paketObatModel);
+		current.flush();
+		
+		return paketObatModel.getPaketBarang_id();
 		
 	}
 
 	@Override
-	public void paketObatDelete(m_PaketObat paketObatModel) {
+	public int paketObatDelete(m_PaketObat paketObatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(paketObatModel);
+		current.flush();
+		
+		return paketObatModel.getPaketBarang_id();
 		
 	}
 

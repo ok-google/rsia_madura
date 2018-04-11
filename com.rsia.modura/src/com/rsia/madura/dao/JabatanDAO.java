@@ -8,7 +8,7 @@ public interface JabatanDAO {
 	public List<m_Jabatan> getJabatans();
 	public m_Jabatan getJabatan(int jabatanId);
 	
-	public void jabatanStore(m_Jabatan jabatanModel);
-	public void jabatanUpdate(m_Jabatan jabatanModel);
-	public void jabatanDelete(m_Jabatan jabatanModel);
+	public int jabatanStore(m_Jabatan jabatanModel);
+	public int jabatanUpdate(m_Jabatan jabatanModel);
+	public int jabatanDelete(m_Jabatan jabatanModel);
 }

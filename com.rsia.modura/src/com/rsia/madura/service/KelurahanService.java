@@ -9,5 +9,5 @@ public interface KelurahanService {
 	public List<m_Kelurahan> getKelurahans(int page, int limit);
 	public String createLinks(int page, int limit);
 	
-	public void store(m_Kelurahan kelurahanModel);
+	public int store(m_Kelurahan kelurahanModel);
 }

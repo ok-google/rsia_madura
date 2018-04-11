@@ -11,7 +11,7 @@ public interface KotaDAO {
 	public String createLinks(int page, int limit);
 	public m_Kota getKota(int kotaId);
 	
-	public void kotaStore(m_Kota kotaModel);
-	public void kotaUpdate(m_Kota kotaModel);
-	public void kotaDelete(m_Kota kotaModel);
+	public int kotaStore(m_Kota kotaModel);
+	public int kotaUpdate(m_Kota kotaModel);
+	public int kotaDelete(m_Kota kotaModel);
 }

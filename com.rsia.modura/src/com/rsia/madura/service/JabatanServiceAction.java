@@ -30,25 +30,25 @@ public class JabatanServiceAction implements JabatanService {
 
 	@Override
 	@Transactional
-	public void store(m_Jabatan jabatanModel) {
+	public int store(m_Jabatan jabatanModel) {
 		
-		jabatanDAO.jabatanStore(jabatanModel);
+		return jabatanDAO.jabatanStore(jabatanModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Jabatan jabatanModel) {
+	public int update(m_Jabatan jabatanModel) {
 		
-		jabatanDAO.jabatanUpdate(jabatanModel);
+		return jabatanDAO.jabatanUpdate(jabatanModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Jabatan jabatanModel) {
+	public int delete(m_Jabatan jabatanModel) {
 		
-		jabatanDAO.jabatanDelete(jabatanModel);
+		return jabatanDAO.jabatanDelete(jabatanModel);
 
 	}
 

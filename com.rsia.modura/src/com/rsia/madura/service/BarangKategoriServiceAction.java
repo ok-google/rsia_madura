@@ -40,25 +40,25 @@ public class BarangKategoriServiceAction implements BarangKategoriService {
 
 	@Override
 	@Transactional
-	public void store(m_BarangKategori kategoriModel) {
+	public int store(m_BarangKategori kategoriModel) {
 		
-		barangKategoriDAO.kategoriStore(kategoriModel);
+		return barangKategoriDAO.kategoriStore(kategoriModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_BarangKategori kategoriModel) {
+	public int update(m_BarangKategori kategoriModel) {
 		
-		barangKategoriDAO.kategoriUpdate(kategoriModel);
+		return barangKategoriDAO.kategoriUpdate(kategoriModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_BarangKategori kategoriModel) {
+	public int delete(m_BarangKategori kategoriModel) {
 		
-		barangKategoriDAO.kategoriDelete(kategoriModel);
+		return barangKategoriDAO.kategoriDelete(kategoriModel);
 
 	}
 

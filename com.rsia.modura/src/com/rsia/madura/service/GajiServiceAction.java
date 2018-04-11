@@ -47,25 +47,25 @@ public class GajiServiceAction implements GajiService {
 
 	@Override
 	@Transactional
-	public void store(t_Gaji gajiModel) {
+	public int store(t_Gaji gajiModel) {
 		
-		gajiDAO.gajiStore(gajiModel);
+		return gajiDAO.gajiStore(gajiModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(t_Gaji gajiModel) {
+	public int update(t_Gaji gajiModel) {
 		
-		gajiDAO.gajiUpdate(gajiModel);
+		return gajiDAO.gajiUpdate(gajiModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(t_Gaji gajiModel) {
+	public int delete(t_Gaji gajiModel) {
 		
-		gajiDAO.gajiDelete(gajiModel);
+		return gajiDAO.gajiDelete(gajiModel);
 
 	}
 

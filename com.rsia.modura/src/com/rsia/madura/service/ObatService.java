@@ -10,7 +10,7 @@ public interface ObatService {
 	public String createLinks(int page, int limit);
 	public m_Obat getObat(int obatId);
 	
-	public void store(m_Obat obatModel);
-	public void update(m_Obat obatModel);
-	public void delete(m_Obat obatModel);
+	public int store(m_Obat obatModel);
+	public int update(m_Obat obatModel);
+	public int delete(m_Obat obatModel);
 }

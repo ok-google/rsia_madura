@@ -43,25 +43,25 @@ public class StokObatServiceAction implements StokObatService {
 
 	@Override
 	@Transactional
-	public void stokObatStore(t_StokObat stokObatModel) {
+	public int stokObatStore(t_StokObat stokObatModel) {
 		
-		stokObatDAO.stokObatStore(stokObatModel);
+		return stokObatDAO.stokObatStore(stokObatModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void stokObatUpdate(t_StokObat stokObatModel) {
+	public int stokObatUpdate(t_StokObat stokObatModel) {
 		
-		stokObatDAO.stokObatUpdate(stokObatModel);
+		return stokObatDAO.stokObatUpdate(stokObatModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void stokObatDelete(t_StokObat stokObatModel) {
+	public int stokObatDelete(t_StokObat stokObatModel) {
 		
-		stokObatDAO.stokObatDelete(stokObatModel);
+		return stokObatDAO.stokObatDelete(stokObatModel);
 
 	}
 

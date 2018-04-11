@@ -10,8 +10,8 @@ public interface KecamatanDAO {
 	public String createLinks(int page, int limit);
 	public m_Kecamatan getKecamatan(int kecamatanId);
 	
-	public void kecamatanStore(m_Kecamatan kecamatanModel);
-	public void kecamatanUpdate(m_Kecamatan kecamatanModel);
-	public void kecamatanDelete(m_Kecamatan kecamatanModel);
+	public int kecamatanStore(m_Kecamatan kecamatanModel);
+	public int kecamatanUpdate(m_Kecamatan kecamatanModel);
+	public int kecamatanDelete(m_Kecamatan kecamatanModel);
 	
 }

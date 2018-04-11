@@ -59,26 +59,34 @@ public class GajiAction implements GajiDAO {
 	}
 
 	@Override
-	public void gajiStore(t_Gaji gajiModel) {
+	public int gajiStore(t_Gaji gajiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(gajiModel);
+		current.flush();
+		
+		return gajiModel.getGaji_id();
 
 	}
 
 	@Override
-	public void gajiUpdate(t_Gaji gajiModel) {
+	public int gajiUpdate(t_Gaji gajiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(gajiModel);
-
+		current.flush();
+		
+		return gajiModel.getGaji_id();
 	}
 
 	@Override
-	public void gajiDelete(t_Gaji gajiModel) {
+	public int gajiDelete(t_Gaji gajiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(gajiModel);
+		current.flush();
+		
+		return gajiModel.getGaji_id();
 	}
 
 	@Override

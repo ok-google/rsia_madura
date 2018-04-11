@@ -36,26 +36,33 @@ public class JabatanAction implements JabatanDAO {
 	}
 
 	@Override
-	public void jabatanStore(m_Jabatan jabatanModel) {
+	public int jabatanStore(m_Jabatan jabatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(jabatanModel);
-
+		current.flush();
+		
+		return jabatanModel.getJabatan_id();
 	}
 
 	@Override
-	public void jabatanUpdate(m_Jabatan jabatanModel) {
+	public int jabatanUpdate(m_Jabatan jabatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(jabatanModel);
-
+		current.flush();
+		
+		return jabatanModel.getJabatan_id();
 	}
 
 	@Override
-	public void jabatanDelete(m_Jabatan jabatanModel) {
+	public int jabatanDelete(m_Jabatan jabatanModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(jabatanModel);
+		current.flush();
+		
+		return jabatanModel.getJabatan_id();
 
 	}
 

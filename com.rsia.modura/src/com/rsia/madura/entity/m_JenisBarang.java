@@ -12,7 +12,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="m_barang_jenis")
 public class m_JenisBarang {
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)	
 	@Column(name="barangjenis_id")
@@ -25,7 +24,7 @@ public class m_JenisBarang {
 	private String NamaJB;
 	
 	@Column(name="barangjenis_parent")
-	private int ParentBJ;
+	private Integer ParentBJ;
 	
 	@Column(name="barangjenis_keterangan")
 	private String KeteranganBJ;

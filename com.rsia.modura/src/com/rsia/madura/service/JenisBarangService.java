@@ -8,7 +8,7 @@ public interface JenisBarangService {
 	public List<m_JenisBarang> getJenisBarangs();
 	public m_JenisBarang getJenisBarang(int jenisBarangId);
 	
-	public void store(m_JenisBarang jenisBarangModel);
-	public void update(m_JenisBarang jenisBarangModel);
-	public void delete(m_JenisBarang jenisBarangModel);
+	public int store(m_JenisBarang jenisBarangModel);
+	public int update(m_JenisBarang jenisBarangModel);
+	public int delete(m_JenisBarang jenisBarangModel);
 }

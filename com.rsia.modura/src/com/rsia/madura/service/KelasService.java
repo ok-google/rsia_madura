@@ -8,7 +8,7 @@ public interface KelasService {
 	public List<m_Kelas> getKelass();
 	public m_Kelas getKelas(int kelasId);
 	
-	public void store(m_Kelas kelasModel);
-	public void update(m_Kelas kelasModel);
-	public void delete(m_Kelas kelasModel);
+	public int store(m_Kelas kelasModel);
+	public int update(m_Kelas kelasModel);
+	public int delete(m_Kelas kelasModel);
 }

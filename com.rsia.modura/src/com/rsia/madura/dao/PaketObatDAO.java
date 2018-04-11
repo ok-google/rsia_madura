@@ -10,7 +10,7 @@ public interface PaketObatDAO {
 	public String createLinks(int page, int limit);
 	public m_PaketObat getPaketObat(int paketObatId);
 	
-	public void paketObatStore(m_PaketObat paketObatModel);
-	public void paketObatUpdate(m_PaketObat paketObatModel);
-	public void paketObatDelete(m_PaketObat paketObatModel);
+	public int paketObatStore(m_PaketObat paketObatModel);
+	public int paketObatUpdate(m_PaketObat paketObatModel);
+	public int paketObatDelete(m_PaketObat paketObatModel);
 }

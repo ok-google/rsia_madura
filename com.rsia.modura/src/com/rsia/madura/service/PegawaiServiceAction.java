@@ -36,23 +36,23 @@ public class PegawaiServiceAction implements PegawaiService {
 
 	@Override
 	@Transactional
-	public void store(m_Pegawai pegawaiModel) {
+	public int store(m_Pegawai pegawaiModel) {
 		
-		pegawaiDAO.pegawaiStore(pegawaiModel);
+		return pegawaiDAO.pegawaiStore(pegawaiModel);
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Pegawai pegawaiModel) {
+	public int update(m_Pegawai pegawaiModel) {
 		
-		pegawaiDAO.pegawaiUpdate(pegawaiModel);
+		return pegawaiDAO.pegawaiUpdate(pegawaiModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Pegawai pegawaiModel) {
+	public int delete(m_Pegawai pegawaiModel) {
 		
-		pegawaiDAO.pegawaiDelete(pegawaiModel);
+		return pegawaiDAO.pegawaiDelete(pegawaiModel);
 	}
 	
 	

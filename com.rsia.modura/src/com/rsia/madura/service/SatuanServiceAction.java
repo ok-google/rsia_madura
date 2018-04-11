@@ -30,24 +30,24 @@ public class SatuanServiceAction implements SatuanService {
 
 	@Override
 	@Transactional
-	public void store(m_Satuan satuanModel) {
+	public int store(m_Satuan satuanModel) {
 		
-		satuanDAO.satuanStore(satuanModel);
+		return satuanDAO.satuanStore(satuanModel);
 		
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Satuan satuanModel) {
+	public int update(m_Satuan satuanModel) {
 		
-		satuanDAO.satuanUpdate(satuanModel);
+		return satuanDAO.satuanUpdate(satuanModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Satuan satuanModel) {
+	public int delete(m_Satuan satuanModel) {
 		
-		satuanDAO.satuanDelete(satuanModel);
+		return satuanDAO.satuanDelete(satuanModel);
 	}
 
 }

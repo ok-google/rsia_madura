@@ -30,25 +30,25 @@ public class RoleServiceAction implements RoleService {
 
 	@Override
 	@Transactional
-	public void store(s_Role roleModel) {
+	public int store(s_Role roleModel) {
 		
-		roleDAO.roleStore(roleModel);
+		return roleDAO.roleStore(roleModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(s_Role roleModel) {
+	public int update(s_Role roleModel) {
 		
-		roleDAO.roleUpdate(roleModel);
+		return roleDAO.roleUpdate(roleModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(s_Role roleModel) {
+	public int delete(s_Role roleModel) {
 		
-		roleDAO.roleDelete(roleModel);
+		return roleDAO.roleDelete(roleModel);
 
 	}
 

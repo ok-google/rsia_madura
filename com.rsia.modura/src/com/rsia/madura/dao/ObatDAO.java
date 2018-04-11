@@ -10,7 +10,7 @@ public interface ObatDAO {
 	public String createLinks(int page, int limit);
 	public m_Obat getObat(int obatId);
 	
-	public void obatStore(m_Obat obatModel);
-	public void obatUpdate(m_Obat obatModel);
-	public void obatDelete(m_Obat obatModel);
+	public int obatStore(m_Obat obatModel);
+	public int obatUpdate(m_Obat obatModel);
+	public int obatDelete(m_Obat obatModel);
 }

@@ -11,8 +11,8 @@ public interface BarangDAO {
 	public String createLinks(int page, int limit);
 	public m_Barang getBarang(int barangId);
 	
-	public void barangStore(m_Barang barangModel);
-	public void barangUpdate(m_Barang barangModel);
-	public void barangDelete(m_Barang barangModel);
+	public int barangStore(m_Barang barangModel);
+	public int barangUpdate(m_Barang barangModel);
+	public int barangDelete(m_Barang barangModel);
 
 }

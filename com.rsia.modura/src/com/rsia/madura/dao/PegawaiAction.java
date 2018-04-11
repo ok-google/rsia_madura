@@ -57,7 +57,7 @@ public class PegawaiAction implements PegawaiDAO {
 	}
 
 	@Override
-	public void pegawaiStore(m_Pegawai pegawaiModel) {
+	public int pegawaiStore(m_Pegawai pegawaiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(pegawaiModel);
@@ -65,22 +65,30 @@ public class PegawaiAction implements PegawaiDAO {
 		current.flush();
 		
 		this.id = pegawaiModel.getPegawai_id();
+		
+		return pegawaiModel.getPegawai_id();
 
 	}
 
 	@Override
-	public void pegawaiUpdate(m_Pegawai pegawaiModel) {
+	public int pegawaiUpdate(m_Pegawai pegawaiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(pegawaiModel);
+		current.flush();
+		
+		return pegawaiModel.getPegawai_id();
 
 	}
 
 	@Override
-	public void pegawaiDelete(m_Pegawai pegawaiModel) {
+	public int pegawaiDelete(m_Pegawai pegawaiModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(pegawaiModel);
+		current.flush();
+		
+		return pegawaiModel.getPegawai_id();
 	}
 
 	@Override

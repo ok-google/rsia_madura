@@ -90,27 +90,34 @@ public class PaketDAOAction implements PaketDAO {
 	}
 
 	@Override
-	public void paketStore(m_Paket paketModel) {
+	public int paketStore(m_Paket paketModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(paketModel);
+		current.flush();
+		
+		return paketModel.getPaket_id();
 
 	}
 
 	@Override
-	public void paketUpdate(m_Paket paketModel) {
+	public int paketUpdate(m_Paket paketModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(paketModel);
-
+		current.flush();
+		
+		return paketModel.getPaket_id();
 	}
 
 	@Override
-	public void paketDelete(m_Paket paketModel) {
+	public int paketDelete(m_Paket paketModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(paketModel);
-
+		current.flush();
+		
+		return paketModel.getPaket_id();
 	}
 
 }

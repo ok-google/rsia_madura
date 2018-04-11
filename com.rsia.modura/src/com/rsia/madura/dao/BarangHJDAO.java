@@ -12,12 +12,12 @@ public interface BarangHJDAO {
 
 	public String createLinks(int page, int limit);
 
-	public void baranghjStore(m_BarangHJ baranghjModel);
+	public int baranghjStore(m_BarangHJ baranghjModel);
 
 	public m_BarangHJ getbarangHJ(int IDBarangHJ);
 
-	public void barangHJUpdate(m_BarangHJ baranghjModel);
+	public int barangHJUpdate(m_BarangHJ baranghjModel);
 
-	public void BarangHJDelete(m_BarangHJ baranghjModel);
+	public int BarangHJDelete(m_BarangHJ baranghjModel);
 
 }

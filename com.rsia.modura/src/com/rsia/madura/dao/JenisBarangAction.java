@@ -36,26 +36,35 @@ public class JenisBarangAction implements JenisBarangDAO {
 	}
 
 	@Override
-	public void jenisBarangStore(m_JenisBarang jenisBarangModel) {
+	public int jenisBarangStore(m_JenisBarang jenisBarangModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(jenisBarangModel);
+		current.flush();
+		
+		return jenisBarangModel.getIdBarangJenis();
 		
 	}
 
 	@Override
-	public void jenisBarangUpdate(m_JenisBarang jenisBarangModel) {
+	public int jenisBarangUpdate(m_JenisBarang jenisBarangModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(jenisBarangModel);
+		current.flush();
+		
+		return jenisBarangModel.getIdBarangJenis();
 		
 	}
 
 	@Override
-	public void jenisBarangDelete(m_JenisBarang jenisBarangModel) {
+	public int jenisBarangDelete(m_JenisBarang jenisBarangModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(jenisBarangModel);
+		current.flush();
+		
+		return jenisBarangModel.getIdBarangJenis();
 		
 	}
 }

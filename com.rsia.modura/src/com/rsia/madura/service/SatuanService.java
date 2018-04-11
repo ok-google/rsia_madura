@@ -8,7 +8,7 @@ public interface SatuanService {
 	public List<m_Satuan> getSatuans();
 	public m_Satuan getSatuan(int satuanId);
 	
-	public void store(m_Satuan satuanModel);
-	public void update(m_Satuan satuanModel);
-	public void delete(m_Satuan satuanModel);
+	public int store(m_Satuan satuanModel);
+	public int update(m_Satuan satuanModel);
+	public int delete(m_Satuan satuanModel);
 }

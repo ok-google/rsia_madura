@@ -85,11 +85,13 @@ public class BarangHJAction implements BarangHJDAO {
     }
 	
 	@Override
-	public void baranghjStore(m_BarangHJ baranghjModel) {
+	public int baranghjStore(m_BarangHJ baranghjModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(baranghjModel);
+		current.flush();
 		
+		return baranghjModel.getIdBarangHJ();
 	}
 	
 	@Override
@@ -102,18 +104,23 @@ public class BarangHJAction implements BarangHJDAO {
 	}
 	
 	@Override
-	public void barangHJUpdate(m_BarangHJ baranghjModel) {
+	public int barangHJUpdate(m_BarangHJ baranghjModel) {
 		
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(baranghjModel);
+		current.flush();
 		
+		return baranghjModel.getIdBarangHJ();		
 	}
 	
 	@Override
-	public void BarangHJDelete(m_BarangHJ baranghjModel) {
+	public int BarangHJDelete(m_BarangHJ baranghjModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(baranghjModel);
+		current.flush();
+		
+		return baranghjModel.getIdBarangHJ();
 	}
 }

@@ -14,10 +14,10 @@ public interface BarangHJService {
 
 	public m_BarangHJ getBarangHJ(int IDBarangHJ);
 
-	public void store(m_BarangHJ baranghjModel);
+	public int store(m_BarangHJ baranghjModel);
 
-	public void update(m_BarangHJ baranghjModel);
+	public int update(m_BarangHJ baranghjModel);
 
-	public void delete(m_BarangHJ baranghjModel);
+	public int delete(m_BarangHJ baranghjModel);
 
 }

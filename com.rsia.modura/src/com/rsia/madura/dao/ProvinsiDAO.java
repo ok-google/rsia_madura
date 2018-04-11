@@ -9,8 +9,8 @@ public interface ProvinsiDAO {
 	public String createLinks(int page, int limit);
 	public m_Provinsi getProvinsi(int provinsiId);
 	
-	public void provinsiStore(m_Provinsi provinsiModel);
-	public void provinsiUpdate(m_Provinsi provinsiModel);
-	public void provinsiDelete(m_Provinsi provinsiModel);
+	public int provinsiStore(m_Provinsi provinsiModel);
+	public int provinsiUpdate(m_Provinsi provinsiModel);
+	public int provinsiDelete(m_Provinsi provinsiModel);
 	
 }

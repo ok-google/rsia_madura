@@ -85,7 +85,7 @@ public class BarangAction implements BarangDAO {
 
 	@Override
 	public m_Barang getBarang(int barangId) {
-		Session current = sessionFactory.getCurrentSession();
+		Session current = sessionFactory.	getCurrentSession();
 		
 		m_Barang result = current.get(m_Barang.class, barangId);
 		
@@ -93,26 +93,34 @@ public class BarangAction implements BarangDAO {
 	}
 
 	@Override
-	public void barangStore(m_Barang barangModel) {
+	public int barangStore(m_Barang barangModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(barangModel);
+		current.flush();
 		
+		return barangModel.getIdBarang();
 	}
 
 	@Override
-	public void barangUpdate(m_Barang barangModel) {
+	public int barangUpdate(m_Barang barangModel) {
+		Session current = sessionFactory.getCurrentSession();
+		
+		current.saveOrUpdate(barangModel);
+		current.flush();
+		
+		return barangModel.getIdBarang();
+	}
+
+	@Override
+	public int barangDelete(m_Barang barangModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(barangModel);
 		
-	}
-
-	@Override
-	public void barangDelete(m_Barang barangModel) {
-		Session current = sessionFactory.getCurrentSession();
+		current.flush();
 		
-		current.saveOrUpdate(barangModel);
+		return barangModel.getIdBarang();
 		
 	}
 }

@@ -35,26 +35,35 @@ public class KelasDAOAction implements KelasDAO {
 	}
 
 	@Override
-	public void kelasStore(m_Kelas kelasModel) {
+	public int kelasStore(m_Kelas kelasModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(kelasModel);
+		current.flush();
+		
+		return kelasModel.getKelas_id();
 
 	}
 
 	@Override
-	public void kelasUpdate(m_Kelas kelasModel) {
+	public int kelasUpdate(m_Kelas kelasModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kelasModel);
+		current.flush();
+		
+		return kelasModel.getKelas_id();
 
 	}
 
 	@Override
-	public void kelasDelete(m_Kelas kelasModel) {
+	public int kelasDelete(m_Kelas kelasModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kelasModel);
+		current.flush();
+		
+		return kelasModel.getKelas_id();
 
 	}
 

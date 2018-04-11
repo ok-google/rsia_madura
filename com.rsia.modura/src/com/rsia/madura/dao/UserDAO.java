@@ -8,7 +8,7 @@ public interface UserDAO {
 	public List<s_User> getUsers();
 	public s_User getUser(int userId);
 	
-	public void userStore(s_User userModel);
-	public void userUpdate(s_User userModel);
-	public void userDelete(s_User userModel);
+	public int userStore(s_User userModel);
+	public int userUpdate(s_User userModel);
+	public int userDelete(s_User userModel);
 }

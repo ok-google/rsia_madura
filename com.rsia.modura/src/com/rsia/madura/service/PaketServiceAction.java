@@ -43,22 +43,22 @@ public class PaketServiceAction implements PaketService {
 
 	@Override
 	@Transactional
-	public void store(m_Paket paketModel) {
-		paketDAO.paketStore(paketModel);
+	public int store(m_Paket paketModel) {
+		return paketDAO.paketStore(paketModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Paket paketModel) {
-		paketDAO.paketUpdate(paketModel);
+	public int update(m_Paket paketModel) {
+		return paketDAO.paketUpdate(paketModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Paket paketModel) {
-		paketDAO.paketDelete(paketModel);
+	public int delete(m_Paket paketModel) {
+		return paketDAO.paketDelete(paketModel);
 
 	}
 

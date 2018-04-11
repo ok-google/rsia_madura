@@ -44,23 +44,23 @@ public class BarangHJServiceAction implements BarangHJService {
 	
 	@Override
 	@Transactional
-	public void store(m_BarangHJ baranghjModel) {
+	public int store(m_BarangHJ baranghjModel) {
 		
-		baranghjDAO.baranghjStore(baranghjModel);
+		return baranghjDAO.baranghjStore(baranghjModel);
 	}
 	
 	@Override
 	@Transactional
-	public void update(m_BarangHJ baranghjModel) {
+	public int update(m_BarangHJ baranghjModel) {
 		
-		baranghjDAO.barangHJUpdate(baranghjModel);
+		return baranghjDAO.barangHJUpdate(baranghjModel);
 		
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_BarangHJ baranghjModel) {
-		baranghjDAO.BarangHJDelete(baranghjModel);
+	public int delete(m_BarangHJ baranghjModel) {
+		return baranghjDAO.BarangHJDelete(baranghjModel);
 		
 	}
 

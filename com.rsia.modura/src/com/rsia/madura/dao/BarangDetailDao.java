@@ -11,9 +11,9 @@ public interface BarangDetailDao {
 	public String createLinks(int page, int limit);
 	public m_BarangDetail getBarangDetail(int barangdet_id);
 
-	public void barangdetailStore(m_BarangDetail barangdetailModel);
-	public void barangdetailUpdate(m_BarangDetail barangdetailModel);
-	public void barangdetailDelete(m_BarangDetail barangdetailModel);
+	public int barangdetailStore(m_BarangDetail barangdetailModel);
+	public int barangdetailUpdate(m_BarangDetail barangdetailModel);
+	public int barangdetailDelete(m_BarangDetail barangdetailModel);
 	
 
 }

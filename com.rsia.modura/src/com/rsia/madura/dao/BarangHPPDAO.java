@@ -12,7 +12,7 @@ public interface BarangHPPDAO {
 	public String createLinks(int page, int limit);
 	public m_BarangHPP getBarangHPP(int IdBarangHPP);
 	
-	public void baranghppStore(m_BarangHPP baranghppModel);
-	public void baranghppUpdate(m_BarangHPP baranghppModel);
-	public void baranghppDelete(m_BarangHPP baranghppModel);
+	public int baranghppStore(m_BarangHPP baranghppModel);
+	public int baranghppUpdate(m_BarangHPP baranghppModel);
+	public int baranghppDelete(m_BarangHPP baranghppModel);
 }

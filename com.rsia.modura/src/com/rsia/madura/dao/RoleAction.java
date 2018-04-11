@@ -36,26 +36,35 @@ public class RoleAction implements RoleDAO {
 
 
 	@Override
-	public void roleStore(s_Role roleModel) {
+	public int roleStore(s_Role roleModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(roleModel);
+		current.flush();
+		
+		return roleModel.getRole_id();
 
 	}
 
 	@Override
-	public void roleUpdate(s_Role roleModel) {
+	public int roleUpdate(s_Role roleModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(roleModel);
+		current.flush();
+		
+		return roleModel.getRole_id();
 
 	}
 
 	@Override
-	public void roleDelete(s_Role roleModel) {
+	public int roleDelete(s_Role roleModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(roleModel);
+		current.flush();
+		
+		return roleModel.getRole_id();
 
 	}
 

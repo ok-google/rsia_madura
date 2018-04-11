@@ -11,7 +11,7 @@ public interface BarangHPPService {
 	public m_BarangHPP getBarangHPP(int IdBarangHPP);
 	
 	public String createLinks(int page, int limit);
-	public void store(m_BarangHPP baranghppModel);
-	public void update(m_BarangHPP baranghppModel);
-	public void delete(m_BarangHPP baranghppModel);
+	public int store(m_BarangHPP baranghppModel);
+	public int update(m_BarangHPP baranghppModel);
+	public int delete(m_BarangHPP baranghppModel);
 }

@@ -8,7 +8,7 @@ public interface JabatanService {
 	public List<m_Jabatan> getJabatans();
 	public m_Jabatan getJabatan(int jabatanId);
 	
-	public void store(m_Jabatan jabatanModel);
-	public void update(m_Jabatan jabatanModel);
-	public void delete(m_Jabatan jabatanModel);
+	public int store(m_Jabatan jabatanModel);
+	public int update(m_Jabatan jabatanModel);
+	public int delete(m_Jabatan jabatanModel);
 }

@@ -92,26 +92,33 @@ public class BarangDetailAction implements BarangDetailDao {
 	}
 	
 	@Override
-	public void barangdetailStore(m_BarangDetail barangdetailModel) {
+	public int barangdetailStore(m_BarangDetail barangdetailModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(barangdetailModel);
+		current.flush();
 		
+		return barangdetailModel.getIdBarangDet();
 	}
 
 	@Override
-	public void barangdetailUpdate(m_BarangDetail barangdetailModel) {
+	public int barangdetailUpdate(m_BarangDetail barangdetailModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(barangdetailModel);
+		current.flush();
 		
+		return barangdetailModel.getIdBarangDet();
 	}
 
 	@Override
-	public void barangdetailDelete(m_BarangDetail barangdetailModel) {
+	public int barangdetailDelete(m_BarangDetail barangdetailModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(barangdetailModel);
+		current.flush();
+		
+		return barangdetailModel.getIdBarangDet();
 		
 	}
 

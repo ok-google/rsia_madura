@@ -42,23 +42,23 @@ public class BarangServiceAction implements BarangService {
 
 	@Override
 	@Transactional
-	public void barangStore(m_Barang barangModel) {
+	public int store(m_Barang barangModel) {
 		// TODO Auto-generated method stub
-		barangDAO.barangStore(barangModel);
+		return barangDAO.barangStore(barangModel);
 	}
 
 	@Override
 	@Transactional
-	public void barangUpdate(m_Barang barangModel) {
+	public int update(m_Barang barangModel) {
 		// TODO Auto-generated method stub
-		barangDAO.barangUpdate(barangModel);
+		return barangDAO.barangUpdate(barangModel);
 	}
 
 	@Override
 	@Transactional
-	public void barangDelete(m_Barang barangModel) {
+	public int delete(m_Barang barangModel) {
 		// TODO Auto-generated method stub
-		barangDAO.barangDelete(barangModel);
+		return barangDAO.barangDelete(barangModel);
 	}
 	
 	

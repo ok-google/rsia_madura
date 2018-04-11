@@ -91,27 +91,36 @@ public class BarangKategoriAction implements BarangKategoriDAO {
 	}
 
 	@Override
-	public void kategoriStore(m_BarangKategori kategoriModel) {
+	public int kategoriStore(m_BarangKategori kategoriModel) {
 		// TODO Auto-generated method stub
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(kategoriModel);
+		current.flush();
+		
+		return kategoriModel.getIdBarangKategori();
 	}
 
 	@Override
-	public void kategoriUpdate(m_BarangKategori kategoriModel) {
+	public int kategoriUpdate(m_BarangKategori kategoriModel) {
 		// TODO Auto-generated method stub
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kategoriModel);
+		current.flush();
+		
+		return kategoriModel.getIdBarangKategori();
 	}
 
 	@Override
-	public void kategoriDelete(m_BarangKategori kategoriModel) {
+	public int kategoriDelete(m_BarangKategori kategoriModel) {
 		// TODO Auto-generated method stub
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kategoriModel);
+		current.flush();
+		
+		return kategoriModel.getIdBarangKategori();
 	}
 
 }

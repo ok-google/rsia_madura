@@ -43,23 +43,23 @@ public class ObatServiceAction implements ObatService {
 
 	@Override
 	@Transactional
-	public void store(m_Obat obatModel) {
+	public int store(m_Obat obatModel) {
 
-		obatDAO.obatStore(obatModel);
+		return obatDAO.obatStore(obatModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_Obat obatModel) {
+	public int update(m_Obat obatModel) {
 		
-		obatDAO.obatUpdate(obatModel);
+		return obatDAO.obatUpdate(obatModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_Obat obatModel) {
-		obatDAO.obatDelete(obatModel);
+	public int delete(m_Obat obatModel) {
+		return obatDAO.obatDelete(obatModel);
 
 	}
 

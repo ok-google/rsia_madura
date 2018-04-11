@@ -10,7 +10,7 @@ public interface PaketDAO {
 	public String createLinks(int page, int limit);
 	public m_Paket getPaket(int paketId);
 	
-	public void paketStore(m_Paket paketModel);
-	public void paketUpdate(m_Paket paketModel);
-	public void paketDelete(m_Paket paketModel);
+	public int paketStore(m_Paket paketModel);
+	public int paketUpdate(m_Paket paketModel);
+	public int paketDelete(m_Paket paketModel);
 }

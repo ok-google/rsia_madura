@@ -30,25 +30,25 @@ public class UserServiceAction implements UserService {
 
 	@Override
 	@Transactional
-	public void store(s_User userModel) {
+	public int store(s_User userModel) {
 		
-		userDAO.userStore(userModel);
+		return userDAO.userStore(userModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(s_User userModel) {
+	public int update(s_User userModel) {
 		
-		userDAO.userUpdate(userModel);
+		return userDAO.userUpdate(userModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(s_User userModel) {
+	public int delete(s_User userModel) {
 		
-		userDAO.userDelete(userModel);
+		return userDAO.userDelete(userModel);
 
 	}
 

@@ -90,26 +90,35 @@ public class ObatAction implements ObatDAO {
 	}
 
 	@Override
-	public void obatStore(m_Obat obatModel) {
+	public int obatStore(m_Obat obatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(obatModel);
+		current.flush();
+		
+		return obatModel.getObat_id();
 
 	}
 
 	@Override
-	public void obatUpdate(m_Obat obatModel) {
+	public int obatUpdate(m_Obat obatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(obatModel);
+		current.flush();
+		
+		return obatModel.getObat_id();
 
 	}
 
 	@Override
-	public void obatDelete(m_Obat obatModel) {
+	public int obatDelete(m_Obat obatModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(obatModel);
+		current.flush();
+		
+		return obatModel.getObat_id();
 
 	}
 

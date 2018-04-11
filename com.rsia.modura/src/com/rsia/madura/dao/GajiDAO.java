@@ -12,8 +12,8 @@ public interface GajiDAO {
 	public getGaji getReport(int gajiId);
 	public void getTotal(t_Gaji gajiModel);
 	
-	public void gajiStore(t_Gaji gajiModel);
-	public void gajiUpdate(t_Gaji gajiModel);
-	public void gajiDelete(t_Gaji gajiModel);
+	public int gajiStore(t_Gaji gajiModel);
+	public int gajiUpdate(t_Gaji gajiModel);
+	public int gajiDelete(t_Gaji gajiModel);
 	public Date convertDateToSQLType(Date date) throws Exception;
 }

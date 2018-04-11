@@ -90,26 +90,33 @@ public class kotaAction implements KotaDAO {
 	}
 
 	@Override
-	public void kotaStore(m_Kota kotaModel) {
+	public int kotaStore(m_Kota kotaModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.save(kotaModel);
+		current.flush();
+		
+		return kotaModel.getkota_id();
 		
 	}
 
 	@Override
-	public void kotaUpdate(m_Kota kotaModel) {
+	public int kotaUpdate(m_Kota kotaModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kotaModel);
+		current.flush();
 		
+		return kotaModel.getkota_id();
 	}
 
 	@Override
-	public void kotaDelete(m_Kota kotaModel) {
+	public int kotaDelete(m_Kota kotaModel) {
 		Session current = sessionFactory.getCurrentSession();
 		
 		current.saveOrUpdate(kotaModel);
+		current.flush();
 		
+		return kotaModel.getkota_id();
 	}
 }

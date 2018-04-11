@@ -44,24 +44,24 @@ public class BarangHPPServiceAction implements BarangHPPService {
 
 	@Override
 	@Transactional
-	public void store(m_BarangHPP baranghppModel) {
+	public int store(m_BarangHPP baranghppModel) {
 		// TODO Auto-generated method stub
-		baranghppDAO.baranghppStore(baranghppModel);
+		return baranghppDAO.baranghppStore(baranghppModel);
 		
 	}
 
 	@Override
 	@Transactional
-	public void update(m_BarangHPP baranghppModel) {
+	public int update(m_BarangHPP baranghppModel) {
 		// TODO Auto-generated method stub
-		baranghppDAO.baranghppUpdate(baranghppModel);
+		return baranghppDAO.baranghppUpdate(baranghppModel);
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_BarangHPP baranghppModel) {
+	public int delete(m_BarangHPP baranghppModel) {
 		// TODO Auto-generated method stub
-		baranghppDAO.baranghppDelete(baranghppModel);
+		return baranghppDAO.baranghppDelete(baranghppModel);
 	}
 
 }

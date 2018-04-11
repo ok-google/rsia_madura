@@ -43,25 +43,25 @@ public class PaketObatServiceAction implements PaketObatService {
 
 	@Override
 	@Transactional
-	public void store(m_PaketObat paketObatModel) {
+	public int store(m_PaketObat paketObatModel) {
 		
-		paketObatDAO.paketObatStore(paketObatModel);
+		return paketObatDAO.paketObatStore(paketObatModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void update(m_PaketObat paketObatModel) {
+	public int update(m_PaketObat paketObatModel) {
 		
-		paketObatDAO.paketObatUpdate(paketObatModel);
+		return paketObatDAO.paketObatUpdate(paketObatModel);
 
 	}
 
 	@Override
 	@Transactional
-	public void delete(m_PaketObat paketObatModel) {
+	public int delete(m_PaketObat paketObatModel) {
 		
-		paketObatDAO.paketObatDelete(paketObatModel);
+		return paketObatDAO.paketObatDelete(paketObatModel);
 	}
 
 }

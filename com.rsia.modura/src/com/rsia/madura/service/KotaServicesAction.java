@@ -34,9 +34,9 @@ public class KotaServicesAction implements KotaService{
 
 	@Override
 	@Transactional
-	public void store(m_Kota kotaModel) {
+	public int store(m_Kota kotaModel) {
 		
-		kotaDAO.kotaStore(kotaModel);
+		return kotaDAO.kotaStore(kotaModel);
 	}
 
 }

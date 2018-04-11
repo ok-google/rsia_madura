@@ -8,7 +8,7 @@ public interface JenisBarangDAO {
 	public List<m_JenisBarang> getJenisBarangs();
 	public m_JenisBarang getJenisBarang(int jenisBarangId);
 	
-	public void jenisBarangStore(m_JenisBarang jenisBarangModel);
-	public void jenisBarangUpdate(m_JenisBarang jenisBarangModel);
-	public void jenisBarangDelete(m_JenisBarang jenisBarangModel);
+	public int jenisBarangStore(m_JenisBarang jenisBarangModel);
+	public int jenisBarangUpdate(m_JenisBarang jenisBarangModel);
+	public int jenisBarangDelete(m_JenisBarang jenisBarangModel);
 }

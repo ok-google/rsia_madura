@@ -10,7 +10,7 @@ public interface PaketObatService {
 	public String createLinks(int page, int limit);
 	public m_PaketObat getPaketObat(int paketObatId);
 	
-	public void store(m_PaketObat paketObatModel);
-	public void update(m_PaketObat paketObatModel);
-	public void delete(m_PaketObat paketObatModel);
+	public int store(m_PaketObat paketObatModel);
+	public int update(m_PaketObat paketObatModel);
+	public int delete(m_PaketObat paketObatModel);
 }

@@ -10,7 +10,7 @@ public interface BarangService {
 	public String createLinks(int page, int limit);
 	public m_Barang getBarang(int barangId);
 	
-	public void barangStore(m_Barang barangModel);
-	public void barangUpdate(m_Barang barangModel);
-	public void barangDelete(m_Barang barangModel);
+	public int store(m_Barang barangModel);
+	public int update(m_Barang barangModel);
+	public int delete(m_Barang barangModel);
 }

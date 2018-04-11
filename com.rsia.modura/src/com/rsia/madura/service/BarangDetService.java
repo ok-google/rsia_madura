@@ -11,8 +11,8 @@ public interface BarangDetService {
 	public String createLinks(int page, int limit);
 	public m_BarangDetail getBarangDetail(int bardet_id);
 	
-	public void bardetStore(m_BarangDetail bardetModel);
-	public void bardetUpdate(m_BarangDetail bardetModel);
-	public void bardetDelete(m_BarangDetail bardetModel);
+	public int bardetStore(m_BarangDetail bardetModel);
+	public int bardetUpdate(m_BarangDetail bardetModel);
+	public int bardetDelete(m_BarangDetail bardetModel);
 	
 }
